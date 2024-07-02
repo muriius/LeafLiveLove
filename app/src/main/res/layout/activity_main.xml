@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#a1c9ad"
+    tools:context=".MainActivity">
+    <!-- Pastellgrün -->
+    <!-- FrameLayout für LeafLiveLove-Titel -->
+    <FrameLayout
+        android:id="@+id/leafLiveLoveContainer"
+        android:layout_width="390dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="5dp"
+        android:padding="8dp"
+        android:background="#669171"
+        android:foreground="@drawable/black_border">
+
+        <TextView
+            android:id="@+id/leafLiveLoveTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="LeafLiveLove"
+            android:textColor="#333333"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <!-- TextViews für Temperature, Humidity, Moisture -->
+    <TextView
+        android:id="@+id/temperatureValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature Loading..."
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/leafLiveLoveContainer"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/humidityValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity Loading..."
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/temperatureValue"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/moistureValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moisture Loading..."
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/humidityValue"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Update Button -->
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leafLiveLoveContainer"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="3dp"
+        android:text="Update" />
+
+</RelativeLayout>
